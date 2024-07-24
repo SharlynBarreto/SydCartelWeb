@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SydsCartel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cd5e13e8a5.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include FullCalendar CSS -->
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1> SydsCartel</h1> <!---alt="logo">-->
+                <!--<img src="images/logo00.jpg" alt="logo">-->
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#insperation">Insperation</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span><em>Sydney</span></em> <br>Your Nail Tech From New York</h1>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/logo00.jpg" alt="User Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <div> 
+                        <h2> <em><p style= "color: #d095e2">I am a NYS licensed nail artist providing you with the best service possible. Thank you for choosing me!</em></h2>
+                          <div>
+                    <!-------------<p>I am a NYS licensed nail artist providing you with the best service possible! Thank You For Choosing ME!</p> ----->
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'location')">POLICIES: Location</p>
+                        <p class="tab-links" onclick="opentab(event, 'payment')">Payment</p>
+                        <p class="tab-links" onclick="opentab(event, 'appointment')">Appointment/ Cancellations</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="location">
+                        <ul>
+                            <li><span><b>Location: </b></span></li><br></ul><li> I am homebased in College Point, NY</li>
+                            <li>Exact address will be sent out via email 24hrs before your appointment</li>
+                        </ul>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="payment">
+                        <ul>
+                            <li><span><b>Payments:</b></span></li><br></ul><li> A $20 non refundable deposit is required to book all appointments</li>
+                                <li>All clients have a grace period of 15 minutes. After the grace period your deposit will be forfeited</li>
+                                <li>Remaining balance must be exact cash only</li>
+                    </ul>
+                    </ul>
+                    </div>
+                            <div class="tab-contents" id="appointment">
+                        <ul>
+                            <li><span><b>Appointments/ Cancellations: </b></span></li><br></ul><li> No plus ones</li>
+                            <li>Cancellations/ rescheduling must be done at least 24hrs prior</li>
+                        </ul>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!----------- Services -------->
+       <div id="services">
+        <div class="container">
+            <h1 class="sub-title"> My Services</h1>
+            <div class="services-list">
+                    <div class="service" data-service="Gel-X"> 
+                        <img src=" images/nail4.jpg" alt="Gel-X" />
+                        <i class="fa-solid fa-paintbrush"></i>
+                        <h2>Extention: Gel-X</h2>
+                        <p>3 Hours : A More Natural Look Then Acrylic</p><br>
+                        <ul>
+                            <li> <b>Short: $70.00 </b></li>
+                            <li><b>Medium: $75.00</b></li>
+                            <li><b>Large: $80.0</b></li>
+                        </ul>
+                        <p> <b>These prices are listed for plain sets.</b> Frenchies, designs, etc will be an additional cost.</p>
+                        <a herf="#"> Learn more</a>
+                    </div>
+                    <div class="service" data-service="Acrylic">
+                    <img src=" images/acrylicnails.jpg" alt="Acrylic" />
+                    <i class="fa-solid fa-paintbrush"></i>
+                        <h2>Extention: Acrylic</h2>
+                        <p>3 Hours</p><br>
+                        <ul>
+                            <li> <b>Short: $70.00 </b></li>
+                            <li><b>Medium: $75.00</b></li>
+                            <li><b>Large: $80.00</b></li>
+                        </ul>
+                        <p> <b>These prices are listed for plain sets.</b> Frenchies, designs, etc will be an additional cost.</p>
+                        <a herf="#"> Learn more</a>
+                    </div>
+                    <div class="service" data-service="E-file Manicure"> 
+                        <img src=" images/gelmani.jpeg" alt="E-file Manicure" />
+                        <i class="fa-solid fa-paintbrush"></i>
+                        <h2>Natural Nails: E-file Manicure "Stuctured Mani"</h2>
+                        <p>2 Hours 30 Minutes $75.00</p><br>
+                        <p><ul>
+                            <li>A Russian cuticle cleaning technique with gel application.</li>
+                        <li> Creates the perfect architecture of your nail bed.</li>
+                    <li> Smoothes and strengthens your nails.</li>
+                <li><b> Includes: Glossy Topcoat & Cuticuel Oil</b></li>
+            </ul></p>
+                        <a herf="#"> Learn more </a>
+                    </div>
+                    <div class="service" data-service="Gel Manicure"> 
+                        <img src=" images/natural.jpeg" alt="Gel Manicure" />
+                        <i class="fa-solid fa-paintbrush"></i>
+                        <h2>Natural Nails: Regular Gel Manicure "</h2>
+                        <p>1 Hour: $40.00</p><br>
+                        <ul> 
+                            <li><p><b>This is a regular manicure, NOT a russian manicure. You get to chose the color of gel polish.</b></p></li>
+                        </ul>
+                        <a herf="#"> Learn more</a>
+                    </div>
+                    <div class="service" data-service="Sale"> 
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <h2>SALE: $100 ANYTHING</h2>
+                        <p>3 Hours: $100</p><br>
+                        <ul>
+                        <p><li><b>Once booked please DM with a pic of the set you'd like. Can be Gel X or Acrylics </b></li>
+                        </ul></p>
+                        <a herf="#"> Learn more</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-----Calendar Modal-->
+    <div id="calendar-modal" style="display: none;">
+        <div id="calendar"></div>
+    </div>
+    <!-------------------------------------------------------------- -->
+    <!-- Include FullCalendar JavaScript -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js'></script>
+<script src="scripts.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('.service').on('click', function() {
+        const service = $(this).data('service');
+        $('#calendar-modal').show();
+
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            selectable: true,
+            dateClick: function(info) {
+                alert('You clicked on ' + info.dateStr + ' for service ' + service);
+                $('#calendar-modal').hide();
+            }
+        });
+        calendar.render();
+    });
+
+    // Close modal when clicking outside of it
+    $(window).on('click', function(event) {
+        if (event.target.id == 'calendar-modal') {
+            $('#calendar-modal').hide();
+        }
+    });
+});
+</script>
+    <!-------insperation------->
+    <div id="insperation">
+        <div class="container">
+            <h1 class="sub-title">Insperation</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/nails0.jpg" alt="User Image">
+                    <div class="layer">
+                        <h3>Extentions: Acrylic</h3>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/nail3.jpg" alt="User Image">
+                    <div class="layer">
+                        <h3>Extentions: Gel-X</h3>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/nail2.jpg" alt="User Image">
+                    <div class="layer">
+                        <h3>Gel Manicure</h3>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn"> See More</a>
+        </div>
+    </div>
+<!--------------- Services-->
+<div id= "contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>sharlynbarreto1@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>929-462-2026</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/sydscartel/ "><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name=" email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+
+</form>
+<span id="msg"></span>
+        </div>
+    </div>
+    </div>
+    <div class="copyright">
+        <p> Copyright Ownership To Sharlyn<i class="fa-regular fa-heart"></i> </p>
+    </div>
+</div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(event, tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script> 
+        var sidemenu = document.getElementById("sidemenu");
+        
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwo2OsDUNWfKj9cotMVY3OoyoTVoxQOcozd-6IITKwMGddSg1ARX65idQdnBEe1U9ef/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
